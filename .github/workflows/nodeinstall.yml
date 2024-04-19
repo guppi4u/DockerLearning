@@ -6,7 +6,7 @@ on: [push]
 
 jobs:
 
-  checks-bats-version:
+  checks-and-install-node:
 
     runs-on: ubuntu-latest
 
@@ -36,5 +36,6 @@ jobs:
           cache: ' '
           # Used to specify the path to a dependency file: package-lock.json, yarn.lock, etc. Supports wildcards or a list of file names for caching multiple dependencies.
           cache-dependency-path: ' '
+      - run: node -v
 
       
