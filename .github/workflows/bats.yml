@@ -8,7 +8,7 @@ jobs:
 
   checks-bats-version:
 
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
 
     steps: 
 
