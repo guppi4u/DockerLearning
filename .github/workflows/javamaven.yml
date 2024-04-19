@@ -6,7 +6,7 @@ on: [push]
 
 jobs:
 
-  checks-and-install-node:
+  checks-and-install-java:
 
     runs-on: ubuntu-latest
 
@@ -19,6 +19,7 @@ jobs:
         cache: 'maven'
         cache-dependency-path: 'sub-project/pom.xml' # optional
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn clean test --file pom.xml
+      working-directory: ${{github.workspace}}
 
       
